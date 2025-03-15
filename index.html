@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>One Bowl Nice - Cooking Guide 2024</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="logo">One Bowl Nice</div>
+    <!-- 汉堡菜单按钮 -->
+    <div class="hamburger" id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>                
+      <span class="bar"></span>
+    </div>
+    <!-- 导航链接 -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#ingredients">Ingredients</a></li>
+      <li><a href="#supplier">Supplier</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="home-section">
+    <!-- 幻灯片容器 -->
+    <div class="slideshow">
+      <div class="slide" style="background-image: url('image3.jpg');"></div>
+      <div class="slide" style="background-image: url('image1.jpg');"></div>
+      <div class="slide" style="background-image: url('image2.jpg');"></div>
+      <div class="slide" style="background-image: url('image4.jpg');"></div>
+      <div class="slide" style="background-image: url('image5.jpg');"></div>
+    </div>
+    <div class="overlay"></div>
+    <div class="home-content">
+      <h1 style="font-weight: bold; margin-bottom: -10px;margin-left:10px;">Cooking Guide </h1>
+      <p style="color:rgb(0, 0, 0);font-weight: bolder;margin-left:10px;">Bukit Indah 一碗好中国小炒</p>
+      <a href="#menu" class="btn">Menu</a>
+      <a href="#supplier" class="btn">Supplier</a>
+      <p style="color:rgb(0, 0, 0); margin-top: 80px; text-align: center;">Last Modify - 2025 March by Ruth Chong</p>
+    </div>
+  </section>
+
+<!--DIVIDER-->
+<div><hr style="margin-top: 30px; margin-bottom: 30px;"/></div>
+<!--DIVIDER-->
+
+<!-- menu Section -->
+<section id="menu" class="menu-section">
+  <div class="menu-card">
+    <h1>Menu</h1>
+  </div>
+  <!--Chicken-->
+  <div class="menu-chicken">
+    <span style="width: 80px;">Chicken</span>
+    <div class="menu-cards">
+      <div class="menu-card" onclick="openModal('kungPao')">
+        <h3 class="menu-text">Kung Pao Chicken</h3>
+        <h4 class="menu-text">宫保鸡丁</h4>
+      </div>
+      <div class="menu-card" onclick="openModal('gingerOnion')">
+        <h3 class="menu-text">Ginger Onion Chicken</h3>
+        <h4 class="menu-text">姜葱鸡丁</h4>
+      </div>
+      <div class="menu-card" onclick="openModal('spicyChicken')">
+        <h3 class="menu-text">Spicy Chicken</h3>
+        <h4 class="menu-text">小炒鸡</h4>
+      </div>
+      <div class="menu-card" onclick="openModal('toucuChicken')">
+        <h3 class="menu-text">Toucu Chicken</h3>
+        <h4 class="menu-text">豆酱香菇木耳鸡丁</h4>
+      </div>
+    </div>
+  </div>
+
+<!--Pork-->
+  <div class="menu-pork">
+    <span style="width: 80px;">Pork</span>
+    <div class="menu-cards">
+      <div class="menu-card" onclick="openModal('chilliPork')">
+        <h3 class="menu-text">Chilli Pork</h3>
+        <h4 class="menu-text">辣椒炒肉</h4>
+      </div>
+      <div class="menu-card" onclick="openModal('cabbagePork')">
+        <h3 class="menu-text">Cabbage Pork Belly</h3>
+        <h4 class="menu-text">包菜炒三层肉</h4>
+      </div>
+      <div class="menu-card" onclick="openModal('fishTaste')">
+        <h3 class="menu-text">Fish Taste Pork</h3>
+        <h4 class="menu-text">鱼香肉丝</h4>
+      </div>
+      <div class="menu-card" onclick="openModal('shreddedPork')">
+        <h3 class="menu-text">Shredded Chilli Pork</h3>
+        <h4 class="menu-text">青椒肉丝</h4>
+      </div>
+      <div class="menu-card" onclick="openModal('shreddedPickle')">
+        <h3 class="menu-text">Shredded Pickle Pork</h3>
+        <h4 class="menu-text">咸菜肉丝</h4>
+      </div>
+      <div class="menu-card" onclick="openModal('leekPork')">
+        <h3 class="menu-text">Leek With Pork</h3>
+        <h4 class="menu-text">回锅肉</h4>
+      </div>            
+    </div>
+  </div>  
+<!--Potato-->
+<div class="menu-potato">
+  <span style="width: 80px;">Potato</span>
+  <div class="menu-cards">
+    <div class="menu-card" onclick="openModal('saltPotato')">
+      <h3 class="menu-text">Spicy Salted Potato</h3>
+      <h4 class="menu-text">咸香土豆丝</h4>
+    </div>
+    <div class="menu-card" onclick="openModal('sourPotato')">
+      <h3 class="menu-text">Spicy Sour Potato</h3>
+      <h4 class="menu-text">酸辣土豆丝</h4>
+    </div>   
+  </div>
+</div>
+
+<!--Tofu-->
+<div class="menu-tofu">
+  <span style="width: 80px;">Tofu</span>
+  <div class="menu-cards">
+    <div class="menu-card" onclick="openModal('malaTofu')">
+      <h3 class="menu-text">Mala Tofu</h3>
+      <h4 class="menu-text">麻辣豆腐</h4>
+    </div>
+    <div class="menu-card" onclick="openModal('mapoTofu')">
+      <h3 class="menu-text">Mapo Tofu</h3>
+      <h4 class="menu-text">麻婆豆腐</h4>
+    </div>   
+    <div class="menu-card" onclick="openModal('toucuTofu')">
+      <h3 class="menu-text">Toucu Tofu</h3>
+      <h4 class="menu-text">豆酱肉碎豆腐</h4>
+    </div>    
+  </div>
+</div>  
+
+<!--Other-->
+<div class="menu-other">
+  <span style="width: 80px;">Other</span>
+  <div class="menu-cards">
+    <div class="menu-card" onclick="openModal('tomatoEgg')">
+      <h3 class="menu-text">Tomato Egg</h3>
+      <h4 class="menu-text">番茄滑蛋</h4>
+    </div>
+    <div class="menu-card" onclick="openModal('friedCabbage')">
+      <h3 class="menu-text">Fried Cabbage</h3>
+      <h4 class="menu-text">手撕包菜</h4>
+    </div>   
+    <div class="menu-card" onclick="openModal('friedRice')">
+      <h3 class="menu-text">Fried Rice</h3>
+      <h4 class="menu-text">炒饭</h4>
+    </div>    
+  </div>
+</div>
+  <h3>Menu Picture:</h3>
+  <img src="menu.jpg" alt="menu" style="width: 100%;">
+</section>
+
+<!-- Modal (弹出框) -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+      <img id="modal-img" src="" alt="Food Image">
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+  </div>
+</div>
+
+<!--DIVIDER-->
+<div><hr style="margin-top: 30px; margin-bottom: 30px;"/></div>
+<!--DIVIDER-->
+
+<!-- Ingredients Section -->
+<section id="ingredients" class="ingredients-section">
+<h2>Ingredients</h2>
+<!--肉类-->
+<h3 style="text-decoration: underline;">Meats:</h3>
+<p>Our menu features only four types of meat.</p>
+<div class="ingredients-container">
+  <div class="ingredients">
+    <img src="pork-belly.png" alt="pork belly">
+    <img src="pork-loin.png" alt="pork-loin">
+    <img src="chicken.png" alt="chicken">
+    <img src="minced-pork.png" alt="minced-pork">
+  </div>
+</div>
+<!--蔬菜与干货-->
+
+<h3 style="text-decoration: underline;margin-top: 50px;">Vegetables and Dry Ingredients:</h3>
+<p>The following ingredients can be purchased from any supplier or personally selected in-store.</p>
+<img src="Vegetables.jpg" alt="vegetables">
+<div class="ingredients-container">
+  <div>
+    <h5>Cabbage</h5>
+    <p>包菜</p>
+</div>  
+<div>
+    <h5>Red Chilli & Green Chilli</h5>
+    <p>红辣椒 & 青辣椒</p>
+</div>
+<div>
+    <h5>Green Pepper</h5>
+    <p>青椒</p>
+</div>
+<div>
+    <h5>Spring Onion</h5>
+    <p>葱</p>
+</div>
+<div>
+    <h5>Shallot</h5>
+    <p>小葱</p>
+</div>
+<div>
+    <h5>Dry Chilli</h5>
+    <p>干辣椒</p>
+</div>
+<div>
+    <h5>Garlic</h5>
+    <p>蒜</p>
+</div>
+<div>
+    <h5>Ginger</h5>
+    <p>姜</p>
+</div>
+<div>
+    <h5>Leek China</h5>
+    <p>中国韭菜</p>
+</div>
+<div>
+    <h5>Carrot</h5>
+    <p>胡萝卜</p>
+</div>
+<div>
+    <h5>Mushroom</h5>
+    <p>蘑菇</p>
+</div>
+<div>
+    <h5>Black-Fungus</h5>
+    <p>木耳</p>
+</div>
+<div>
+    <h5>Potato</h5>
+    <p>土豆</p>
+</div>
+<div>
+    <h5>Tofu</h5>
+    <p>豆腐</p>
+</div>
+<div>
+    <h5>Pickle</h5>
+    <p>咸菜</p>
+</div>
+<div>
+    <h5>Tomato</h5>
+    <p>番茄</p>
+</div>
+<div>
+    <h5>Black-Bean</h5>
+    <p>黑豆</p>
+</div>
+<div>
+    <h5>Chilli Padi</h5>
+    <p>小米椒</p>
+</div>
+<div>
+    <h5>Yellow Onion</h5>
+    <p>黄洋葱</p>
+</div>
+<div>
+    <h5>White Sesame</h5>
+    <p>白芝麻</p>
+</div>
+<div>
+  <h5>Peanut</h5>
+  <p>花生</p>
+</div>
+<div>
+    <h5>Eggs</h5>
+    <p>鸡蛋</p>
+</div>
+</div>
+<!--调味粉-->
+<h3 style="text-decoration: underline;margin-top: 50px;">Condiments or Seasonings</h3>
+<p>All seasonings can be purchased from suppliers or supermarkets.</p>
+<img src="Seasonings.jpg" alt="Seasonings">
+<div class="ingredients-container">
+  <div>
+    <h5>Sugar</h5>
+    <p>白糖</p>
+</div>  
+<div>
+    <h5>Salt</h5>
+    <p>盐</p>
+</div>
+<div>
+    <h5>Pepper</h5>
+    <p>胡椒粉</p>
+</div>
+<div>
+    <h5>Ajinomoto</h5>
+    <p>味精</p>
+</div>
+<div>
+    <h5>Knorr Chicken</h5>
+    <p>鸡精粉</p>
+</div>
+<div>
+    <h5>Corn Starch</h5>
+    <p>薯粉</p>
+</div>
+<div>
+    <h5>Soy Sauce</h5>
+    <p>酱油</p>
+</div>
+<div>
+    <h5>White Vinegar</h5>
+    <p>白醋</p>
+</div>
+<div>
+    <h5>Oyster Sauce</h5>
+    <p>蚝油</p>
+</div>
+<div>
+    <h5>Dark-Soy Sauce</h5>
+    <p>黑酱油</p>
+</div>
+<div>
+    <h5>Chilli Powder</h5>
+    <p>辣椒粉</p>
+</div>
+<div>
+    <h5>Sesame oil</h5>
+    <p>麻油</p>
+</div>
+</div>
+<!--中国货-->
+<h3 style="text-decoration: underline;margin-top: 50px;">Chinese Condiments and Seasonings</h3>
+<p>Only available at stores selling Chinese ingredients and materials, or can be purchased online</p>
+<img src="Chinese.jpg" alt="chinese seasonings">
+<div class="ingredients-container">
+  <div>
+    <img src="duojiao.png" alt="剁椒" style="width: 100px; height: auto;">
+    <p style="margin-top: -5px; line-height: 1.2;">剁椒</p>
+</div>  
+<div>
+  <img src="zhenjiang-vinegar.png" alt="镇江黑醋" style="width: 100px; height: auto;">
+  <p style="margin-top: -5px; line-height: 1.2;">镇江黑醋</p>
+</div>
+<div>
+  <img src="huangdoujiang.png" alt="黄豆酱" style="width: 100px; height: auto;">
+  <p style="margin-top: -5px; line-height: 1.2;">黄豆酱</p>
+</div>
+<div>
+  <img src="pixiandoujiang.png" alt="郫县豆酱" style="width: 100px; height: auto;">
+  <p style="margin-top: -5px; line-height: 1.2;">郫县豆酱</p>
+</div>
+<div>
+  <img src="huajiaoyou.png" alt="花椒油" style="width: 100px; height: auto;">
+  <p style="margin-top: -5px; line-height: 1.2;">花椒油</p>
+</div>
+<div>
+  <img src="liaojiu.png" alt="精制料酒" style="width: 100px; height: auto;">
+  <p style="margin-top: -5px; line-height: 1.2;">精制料酒</p>
+</div>
+<div>
+  <img src="tianmianjiang.png" alt="甜面酱" style="width: 100px; height: auto;">
+  <p style="margin-top: -5px; line-height: 1.2;">甜面酱</p>
+</div>
+<div>
+  <img src="huajiao.png" alt="花椒粒" style="width: 100px; height: auto;">
+  <p style="margin-top: -5px; line-height: 1.2;">花椒粒</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!--DIVIDER-->
+<div><hr style="margin-top: 30px; margin-bottom: 30px;"/></div>
+<!--DIVIDER-->
+
+<!-- Supplier Section -->
+<section id="supplier" class="supplier-section">
+  <div class="supplier">
+     <h1>Our Supplier</h1>
+  </div>
+  <div class="supplier">
+    <div>
+    <img src="nsk-skudai.jpg" alt="event1">
+     <p>NSK Trade City @ Skudai, Johor Bahru</p>
+     <address>Lot 100612, PTD105991, Jalan Impian Utama, Taman Impian Emas, 81300 Skudai, Johor Darul Ta'zim</address>
+    </div>
+    <div>
+     <img src="Everjoy.jpg" alt="event1">
+     <p>Everjoy Supermarket</p>
+     <address>28-38, Jalan Temenggung 7, Taman Ungku Tun Aminah, 81300 Skudai, Johor Darul Ta'zim</address>
+    </div>
+    <div>
+      <img src="china-super.jpg" alt="event1">
+      <p>中国超市 China Supermarket JB</p>
+      <address>2G, Jalan Bestari 5/2, Taman Nusa Bestari, 79150 Iskandar Puteri, Johor Darul Ta'zim</address>
+    </div>
+    <div>
+      <h3>VK Vege Online Delivery</h3>
+      <p>016-252 9098</p>
+      <p>vkvegemalaysia@gmail.com</p>
+    </div>
+    <div>
+  </div>
+
+ </section>
+
+ <!--DIVIDER-->
+<div><hr style="margin-top: 30px; margin-bottom: 30px;"/></div>
+<!--DIVIDER-->
+
+<!-- gallery Section -->
+<section id="gallery" class="gallery-section">
+  <h1>Gallery</h1>
+  <div class="gallery-card">
+    <div class="gallery">
+      <img src="g1.png" alt="辣椒炒肉">
+      <div class="text">
+        <h1>辣椒炒肉</h1>
+      </div>
+    </div>
+    <div class="gallery">
+      <img src="g2.png" alt="麻婆豆腐">
+      <div class="text">
+        <h1>麻婆豆腐</h1>
+      </div>
+    </div>
+    <div class="gallery">
+      <img src="g3.png" alt="水煮肉片">
+      <div class="text">
+        <h1>水煮肉片</h1>
+      </div>
+    </div>
+    <div class="gallery">
+      <img src="g4.png" alt="小炒鸡丁">
+      <div class="text">
+        <h1>小炒鸡丁</h1>
+      </div>
+    </div>
+    <div class="gallery">
+      <img src="g5.png" alt="麻辣土豆">
+      <div class="text">
+        <h1>麻辣土豆</h1>
+      </div>
+    </div>
+    <div class="gallery">
+      <img src="g6.png" alt="剁椒秋葵">
+      <div class="text">
+        <h1>剁椒秋葵</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- 滑动照片集 -->
+  <div class="slider-container">
+    <button class="prev-btn">&lt;</button>
+    <div class="slider-wrapper">
+      <div class="slider">
+        <img src="s1.jpg" alt="Image 1">
+        <img src="s2.jpg" alt="Image 2">
+        <img src="s3.jpg" alt="Image 3">
+        <img src="s4.jpg" alt="Image 4">
+        <img src="s5.jpg" alt="Image 5">
+        <img src="s6.jpg" alt="Image 6">
+        <img src="s7.jpg" alt="Image 7">
+        <img src="s8.jpg" alt="Image 8">
+        <img src="s9.jpg" alt="Image 9">
+        <img src="s10.jpg" alt="Image 10">
+      </div>
+    </div>
+    <button class="next-btn">&gt;</button>
+  </div>
+</section>
+
+ <!--DIVIDER-->
+ <div><hr style="margin-top: 30px; margin-bottom: 30px;"/></div>
+ <!--DIVIDER-->
+
+ <section id="about" class="about-section">
+  <h2>Contact</h2>
+  <p>One Bowl Nice is a place where luxury meets exceptional service.</p>
+  <div class="team">
+    <div class="team-member">
+      <div class="team-photo"></div>
+      <!-- 人物介绍 -->
+      <div class="team-info">
+        <div class="person">
+          <h3>William Kum</h3>
+          <p>Head Chef</p>
+          <p>+6011-6172 7335</p>
+          <p>deboxwilliam@gmail.com</p>
+        </div>
+        <div class="person">
+          <h3>Ruth Chong</h3>
+          <p>Project Planner | Developer</p>
+          <p>+6018-8704 123</p>
+          <p>ruthchong.cs@gmail.com</p>
+          <p>
+            <a href="https://sites.google.com/view/ruth-chong" target="_blank" class="portfolio-link">
+              Portfolio
+            </a>
+          </p>
+        </div>
+      </div>
+<!-- 描述 -->
+    <p class="description">
+     Our team is dedicated to providing you with an unforgettable experience. From exquisite cuisine to flawless event planning, we ensure every detail is perfect.
+    </p>
+    </div>
+  </div>
+</section>
+
+<!--DIVIDER-->
+<div><hr style="margin-top: 30px; margin-bottom: 30px;"/></div>
+<!--DIVIDER-->
+
+<!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 RC Media Creation. All rights reserved.</p>
+    <p>Edit version v2.2</p>
+    <ul class="footer-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">Contact</a></li>
+      <li><a href="#menu">Menu</a></li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

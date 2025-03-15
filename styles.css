@@ -1,0 +1,643 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0 20px;
+    color: #000000;
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3 {
+    color:#000;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
+  
+  p {
+    color: #c49b63;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  a:hover {
+    color: #ffffff;
+  }
+  
+  .btn {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    padding: 10px 20px;
+    background-color: #c49b63;
+    color: #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+
+}
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+  }
+  
+  .nav-links li {
+    margin: 0 20px;
+  }
+  
+  .nav-links li a:hover {
+    color: #c49b63;
+  }
+  
+  .social-icons img {
+    width: 20px;
+    margin-right: 20px;
+  }
+  
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 2px;
+  background-color: #000000;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.hamburger:hover .bar {
+  background-color: #ffcc00;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    margin-right: 40px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: -100%;
+    height: 100vh;
+    width: 180px;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    align-items: left;
+    justify-content: left;
+    transition: 0.5s;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .info-box {
+    width: 90%;
+    text-align: center;
+  }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .gallery img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+  /* Home Section */
+  .home-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+  }
+  
+  .home-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    margin-top: 30vh;
+  }
+
+/* Menu Section */
+  .menu-section {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    }
+    
+  .menu-chicken {
+    display: flex;
+    align-items: flex-start; /* 让 .menu-card 从上到下排列 */
+    background-color: #f8e1e1; /* 你可以换成自己喜欢的颜色 */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+}
+    
+
+.menu-pork {
+  display: flex;
+  align-items: flex-start; /* 让 .menu-card 从上到下排列 */
+  background-color: #e1eaf8; /* 你可以换成自己喜欢的颜色 */
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+}
+  
+
+.menu-potato {
+  display: flex;
+  align-items: flex-start; /* 让 .menu-card 从上到下排列 */
+  background-color: #e6f8e1; /* 你可以换成自己喜欢的颜色 */
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+}
+  
+
+.menu-tofu {
+  display: flex;
+  align-items: flex-start; /* 让 .menu-card 从上到下排列 */
+  background-color: #f3e1f8; /* 你可以换成自己喜欢的颜色 */
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+}
+  
+
+.menu-other {
+  display: flex;
+  align-items: flex-start; /* 让 .menu-card 从上到下排列 */
+  background-color: #e1f8ee; /* 你可以换成自己喜欢的颜色 */
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+}
+  
+    
+.menu-card {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 100%;  
+
+  }
+
+.menu-text {
+  margin-bottom: -20px;
+  margin-left: 30px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}  
+
+.menu-card:hover .menu-text {
+  transform: scale(1.2);
+  color: #c49b63;
+}
+
+/* MENU TOUCH SCREEN STYLE */
+@media (hover: none) {
+  .menu-card:active .menu-text {
+      transform: scale(1.2);
+      color: #ff6600;
+  }
+}
+
+/* MENU TAB STYLE */
+.modal {
+  display: none; /* 默认隐藏 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img {
+  max-width: 700px;
+  width: 100%; /* 让图片自适应但不超过500px */
+  height: auto;
+  border-radius: 10px; /* 可选，为图片添加圆角 */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+    
+  
+/* Ingredients Section */
+  .ingredients-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  
+  .ingredients-card {
+    position: relative;
+    width: 300px;
+    margin: 20px;
+  }
+  
+  .ingredients-details {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    display: none;
+  }
+
+  .ingredients-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* 允许换行，方便自适应 */
+    gap: 20px;
+  }
+
+  .ingredients-container h5,
+  .ingredients-container p {
+      transition: transform 0.3s ease;
+      margin-bottom: -10px;
+  }
+  
+  .ingredients-container h5:hover,
+  .ingredients-container h5:active,
+  .ingredients-container p:hover,
+  .ingredients-container p:active {
+      transform: scale(1.222);
+  }
+  
+  .ingredients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .ingredients img {
+    width: 150px; /* 设定图片大小 */
+    height: auto;
+    transition: transform 0.3s ease; /* 添加动画 */
+  }
+  
+  .ingredients img:hover {
+    transform: scale(1.1); /* 放大 10% */
+  }
+  
+  .ingredient-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* 让手机端变成竖排 */
+  @media (max-width: 768px) {
+    .ingredients {
+      flex-direction: column;
+    }
+  }
+  
+
+  /* Supplier Section */
+  .supplier-section {
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  .supplier {
+    display: flex;
+    flex-direction: column; /* 让内容垂直排列 */
+    align-items: center; /* 居中对齐 */
+    gap: 10px; /* 每个元素之间的间距 */
+}
+  
+  .supplier img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    border-radius: 10px;
+    filter: brightness(70%);
+  }
+  
+  .supplier > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 让图片和文字都居中 */
+    text-align: center; /* 让文本也居中 */
+}
+
+  /* Gallery Section */
+  .gallery-section {
+    text-align: center;
+    background-color: #ffffff;
+    margin: 30px;
+  }
+  
+  .gallery-card {
+    display: flex;
+    flex-wrap: wrap; /* 让项目在小屏幕换行 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中（如果有高度限制） */
+    gap: 20px;
+    padding: 20px; /* 添加一些间距 */
+  }
+  
+  .gallery {
+    display: flex;
+    flex-direction: column; /* 让图片和文字上下排列 */
+    align-items: center; /* 居中对齐 */
+    text-align: center; /* 文字居中 */
+  }
+  
+  .gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+/* 鼠标靠近时放大 */
+.gallery img:hover {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
+/* 触屏设备：当图片出现在屏幕中央时放大 */
+@media (hover: none) {  
+.gallery img {
+  transition: transform 0.3s ease;
+}
+
+.gallery img:active,
+.gallery img:focus-visible {
+  transform: scale(1.3);
+}
+}
+
+/* 滑动照片集样式 */
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  width: 500px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+  filter: brightness(50%);
+}
+
+/* 中间图片完全显示，两侧部分显示 */
+.slider img:nth-child(2) {
+  transform: scale(1.2);
+  filter: brightness(100%);
+}
+
+/* 左右箭头 */
+.prev-btn, .next-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+  
+  /* Contact Section */
+  .contact-section {
+    background: url('contact-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .portfolio-link {
+    color: black;
+    text-decoration: underline;
+    font-size: 16px; /* 默认字体大小 */
+    transition: font-size 0.3s ease, color 0.3s ease; /* 添加平滑过渡 */
+  }
+
+  .portfolio-link:hover {
+    font-size: 20px; /* 鼠标悬停时放大 */
+    color: rgb(255, 191, 0); /* 可以加一个变色效果（可选） */
+  }
+
+ .about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.team-member {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.team-photo {
+  width: 90%; /* 自适应屏幕大小 */
+  max-width: 800px;
+  min-width: 300px; /* 适配小屏幕 */
+  height: auto; /* 让高度根据宽度调整 */
+  aspect-ratio: 16 / 9; /* 确保图片比例不变 */
+  
+  background-image: url('team.jpg');
+  background-size: contain; /* 确保图片完整显示 */
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  border-radius: 10px;
+  position: relative;
+  margin: 0 auto 20px;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.about-section.show .team-photo {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.team-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.team-info .person {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.team-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.team-info p {
+  font-size: 1rem;
+  color: #c49b63;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #303030;
+  max-width: 600px;
+  margin: 0 auto;
+  
+}
+  
+/* Logo */
+  .logo {
+    width: 60px;
+  }
+
+/* Footer */
+  .footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-links li {
+    margin: 0 15px;
+  }  
