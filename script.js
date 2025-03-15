@@ -211,42 +211,4 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.querySelector(".slider");
-    const images = document.querySelectorAll(".slider img");
-    const prevBtn = document.querySelector(".prev-btn");
-    const nextBtn = document.querySelector(".next-btn");
-    let index = 1;
-  
-    function updateSlider() {
-      const translateX = -index * 500; // 移动图片
-      slider.style.transform = `translateX(${translateX}px)`;
-  
-      // 更新滤镜
-      images.forEach((img, i) => {
-        if (i === index) {
-          img.style.transform = "scale(1.2)";
-          img.style.filter = "brightness(100%)";
-        } else {
-          img.style.transform = "scale(1)";
-          img.style.filter = "brightness(50%)";
-        }
-      });
-    }
-  
-    nextBtn.addEventListener("click", function () {
-      if (index < images.length - 1) {
-        index++;
-        updateSlider();
-      }
-    });
-  
-    prevBtn.addEventListener("click", function () {
-      if (index > 0) {
-        index--;
-        updateSlider();
-      }
-    });
-  
-    updateSlider(); // 初始化
-  });
+
