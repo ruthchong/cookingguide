@@ -128,6 +128,11 @@ const menuData = {
         img: "shreddedpork.jpg",
         description: ""
     },
+    shreddedPickle: {
+        title: "Shredded Pickle Pork",
+        img: "shreddedpickle.jpg",
+        description: ""
+    },    
     leekPork: {
         title: "Leek with Pork",
         img: "leek.jpg",
